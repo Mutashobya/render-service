@@ -1,0 +1,50 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Rendering Service",
+        "license": {
+            "name": "Apache 2"
+        }
+    },
+    "host": "127.0.0.1:3001",
+    "basePath": "/v1",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+   "paths": {
+		"/data": {
+			"get": {
+				"tags": [
+					"data"
+				],
+				"summary": "Starting Page",
+				"parameters": [
+					{
+						"name": "limit",
+						"in": "query",
+						"description": "Return Home Page",
+						"required": false,
+						"type": "integer",
+						"format": "int32"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "Respond with the FSR Index/Dashboard page",
+						"headers": {}
+					},
+					"default": {
+						"description": "unexpected error",
+					}
+				}
+			}
+		}
+    }
+}
